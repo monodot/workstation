@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<settings>
+
+  <mirrors>
+    <mirror>
+      <id>localnexus</id>
+      <name>Local Nexus to Mirror All The Artifacts</name>
+      <url>http://localhost:8085/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+</settings>
