@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! -f ~/.m2/settings.xml ]; then
+if [ -f ~/.m2/settings.xml ]; then
 	mv ~/.m2/settings.xml ~/.m2/settings.xml.bak
 fi
 

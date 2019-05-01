@@ -5,7 +5,7 @@
     <mirror>
       <id>localnexus</id>
       <name>Local Nexus to Mirror All The Artifacts</name>
-      <url>http://localhost:8085/</url>
+      <url>http://localhost:8085/nexus/content/groups/public/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
