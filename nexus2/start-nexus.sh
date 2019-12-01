@@ -4,9 +4,10 @@ NEXUS_VOLUME=$HOME/.local/share/nexus2
 NEXUS_PORT=8085
 
 if [ ! -d $NEXUS_VOLUME ]; then
-        mkdir -p $NEXUS_VOLUME/nexus-data/sonatype-work/conf
+        mkdir -p $NEXUS_VOLUME
         echo "Created Nexus volume directory"
-	cp "$(dirname "${BASH_SOURCE}")/nexus.xml" $NEXUS_VOLUME/nexus-data/sonatype-work/conf/nexus.xml
+        mkdir -p $NEXUS_VOLUME/conf
+	cp "$(dirname "${BASH_SOURCE}")/nexus.xml" $NEXUS_VOLUME/conf/nexus.xml
         echo "Copied default nexus.xml to conf directory"
 fi
 
