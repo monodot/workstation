@@ -11,7 +11,11 @@ if [ ! -d $NEXUS_VOLUME ]; then
         echo "Copied default nexus.xml to conf directory"
 fi
 
-podman run --rm --name nexus2 -p $NEXUS_PORT:8081 -v $NEXUS_VOLUME:/sonatype-work:Z --userns=keep-id -d sonatype/nexus
+sudo podman run --rm --name nexus2 -p $NEXUS_PORT:8081 \
+	-v $NEXUS_VOLUME:/sonatype-work:Z \
+	-v $(dirname "${BASH_SOURCE}")/nexus.properties:/opt/sonatype/nexus/conf/nexus.properties:Z \
+	--userns=keep-id -d \
+	sonatype/nexus
 
 echo "Nexus running shortly on http://localhost:$NEXUS_PORT"
 

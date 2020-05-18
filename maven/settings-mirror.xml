@@ -1,13 +1,24 @@
-<?xml version="1.0"?>
-<settings>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <localRepository>/home/tdonohue/.m2/repository</localRepository>
+  <servers>
+    <server>
+      <username>admin</username>
+      <password>admin123</password>
+      <id>fabric8.upload.repo</id>
+    </server>
+  </servers>
   <mirrors>
     <mirror>
-      <id>localnexus</id>
-      <name>Local Nexus to Mirror All The Artifacts</name>
-      <url>http://localhost:8085/nexus/content/groups/public/</url>
       <mirrorOf>*</mirrorOf>
+      <name>Local Nexus to Mirror All The Artifacts</name>
+      <url>http://127.0.0.1:8085/nexus/content/groups/public/</url>
+      <id>localnexus</id>
     </mirror>
   </mirrors>
-
+  <pluginGroups>
+    <pluginGroup>org.apache.maven.plugins</pluginGroup>
+    <pluginGroup>org.codehaus.mojo</pluginGroup>
+  </pluginGroups>
 </settings>
